@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
-
-
 :root {
-  --blue-color: #2563eb;
-  /* כחול מודרני */
-  --blue-color2: #0f172a;
-  /* כחול כהה/נייבי */
-  --blue-color-dark: #1d4ed8;
-  /* כחול לחיצה / כפתור */
-  --accent-color: #f97316;
-  /* כתום עדין – לאיקונים/היילייט */
+  --blue-color: #800020;       /* בורדו - אדום כהה */
+  --blue-color2: #0f2851;      /* כחול כהה נייבי */
+  --blue-color-dark: #5a0016;  /* בורדו כהה ללחיצות וכפתורים */
+  --accent-color: #f97316;     /* כתום עדין – לאייקונים/היילייט */
   --dark-color: #111827;
   --black-color: #020617;
   --black-color-light: #0b1120;
@@ -21,7 +15,6 @@
   --gray-color2: #6b7280;
   --light-shadow: 0px 1px 1px rgba(22, 23, 22, 0.20);
 }
-
 
 * {
   padding: 0;
@@ -59,10 +52,7 @@ a {
   border-radius: 2px;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-weight: 600;
 }
 
@@ -73,7 +63,7 @@ h4 {
 
 .navbar {
   width: 100%;
-  background: #0f2851;
+  background: #0f2851; /* כחול כהה */
   backdrop-filter: blur(8px);
   transition: all 0.3s ease-in-out;
   padding: 10px 20px;
@@ -91,16 +81,14 @@ h4 {
 .navbar img {
   width: 110px;
   height: 110px;
-  border-radius: 50%;
+  /* border-radius: 50%; - הוסר כדי לשמור על צורת הלוגו המקורית */
   object-fit: cover;
-
 }
 
 .navbar img:hover {
   transform: scale(1.04);
   transition: transform 0.3s ease;
 }
-
 
 .navbar.shrink img {
   width: 100px;
@@ -122,7 +110,6 @@ h4 {
   color: #ffffff !important;
 }
 
-
 /* Shrinking Effect when Scrolling */
 .navbar.shrink {
   padding: 5px 0;
@@ -131,7 +118,6 @@ h4 {
 /* Prevent Content Overlap */
 body {
   padding-top: 0px;
-  /* Default, changed dynamically */
 }
 
 .reveal {
@@ -144,7 +130,6 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 .whatsapp-float {
   position: fixed;
@@ -171,15 +156,13 @@ body {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
-
 .phone-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 8px 15px;
   border-radius: 8px;
-  background-color: #0f2851;
-  /* Blue background */
+  background-color: var(--blue-color); /* שונה לבורדו */
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -196,11 +179,9 @@ body {
 }
 
 .phone-number:hover {
-  background-color: #09004d;
-  /* Darker blue on hover */
+  background-color: var(--blue-color-dark); /* בורדו כהה במעבר עכבר */
 }
 
-/* Centering in mobile mode */
 @media (max-width: 768px) {
   .search-container {
     text-align: center;
@@ -209,7 +190,6 @@ body {
 
   .phone-number {
     display: inline-flex;
-    /* Makes background fit content */
   }
 }
 
@@ -217,8 +197,6 @@ body {
   height: 11rem;
   transition: .5s ease;
 }
-
-
 
 .menu-text {
   display: flex;
@@ -228,7 +206,7 @@ body {
 }
 
 .header-nav ul a {
-  color: #0f2851;
+  color: var(--blue-color2);
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: var(--dark-shadow);
@@ -236,9 +214,8 @@ body {
 }
 
 .header-nav ul a:hover {
-  color: #0f2851(0, 136, 255);
+  color: var(--blue-color);
 }
-
 
 .hero-text {
   color: var(--white-color);
@@ -251,12 +228,11 @@ body {
 }
 
 span {
-  color: var(--blue-color);
+  color: var(--blue-color); /* כעת צבוע בבורדו */
 }
 
 .hero-button {
   display: block;
-  /* מאפשר מרכוז אופקי עם margin */
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 7rem;
@@ -286,14 +262,13 @@ h1 {
 }
 
 #contact {
-  background: radial-gradient(circle at top left, #e0edff, #71ace6);
+  background: radial-gradient(circle at top left, #f1f5f9, #cbd5e1); /* צבע רקע עדין וניטרלי שיתאים לבורדו ולכחול כהה */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 90vh;
   padding: 40px 15px;
 }
-
 
 .form-container {
   width: 100%;
@@ -305,18 +280,13 @@ h1 {
   border: 1px solid #e5e7eb;
 }
 
-
 .phone-input:invalid:focus+.error-message {
   display: block;
 }
 
-
 .email-input:invalid:focus+.error-message {
   display: block;
 }
-
-
-
 
 .error-message {
   display: none;
@@ -324,11 +294,6 @@ h1 {
   font-size: 0.85rem;
   margin-top: 5px;
 }
-
-
-
-
-
 
 .form-container h1.section-heading {
   font-size: 1.8rem;
@@ -351,9 +316,7 @@ label {
   font-size: 0.95rem;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   width: 100%;
   padding: 9px 11px;
   margin-top: 3px;
@@ -364,13 +327,11 @@ textarea {
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: #0b7ed6;
+  border-color: var(--blue-color);
   background-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(11, 126, 214, 0.18);
+  box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.18); /* זוהר בצבע בורדו */
 }
 
 textarea {
@@ -383,7 +344,7 @@ textarea {
   padding: 11px;
   margin-top: 10px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #0b7ed6, #0f2851);
+  background: linear-gradient(135deg, var(--blue-color), var(--blue-color2)); /* מעבר בורדו לכחול כהה */
   color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
@@ -394,16 +355,12 @@ textarea {
 
 #submit-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 25px rgba(15, 40, 81, 0.35);
+  box-shadow: 0 10px 25px rgba(128, 0, 32, 0.35);
   opacity: 0.95;
 }
 
-
-
-
-
 button {
-  background-color: #007BFF;
+  background-color: var(--blue-color);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -413,7 +370,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--blue-color-dark);
 }
 
 .form-group textarea {
@@ -425,13 +382,12 @@ button:hover {
 }
 
 #vid {
-  /* color: #fff; */
   color: rgb(0, 0, 0);
 }
 
 .bgImg {
   min-height: 300px;
-  background-color: rgba(0, 89, 255, 0.168);
+  background-color: rgba(128, 0, 32, 0.10); /* גוון רקע בורדו עדין מאוד */
   display: grid;
   justify-content: center;
   align-items: center;
@@ -442,6 +398,7 @@ button:hover {
   background-color: transparent;
   border: 1px solid var(--gray-color);
   transform: scale(1.1);
+  color: var(--blue-color2);
 }
 
 .hero-button i {
@@ -476,23 +433,13 @@ button:hover {
 }
 
 @keyframes showMenu {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
 }
 
 @keyframes hideMenu {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
 }
 
 .mobile-menu::before {
@@ -518,7 +465,7 @@ button:hover {
 }
 
 .mobile-menu ul a {
-  transition: .3 ease;
+  transition: .3s ease;
 }
 
 .mobile-menu ul a:hover {
@@ -542,22 +489,18 @@ button:hover {
   padding-top: 2rem;
 }
 
-.nav-social-links a:nth-child(1) {
-  color: var(--blue-color);
-  ;
-}
-
-.nav-social-links a:nth-child(2) {
-  color: var(--blue-color);
-  ;
-}
-
+.nav-social-links a:nth-child(1),
+.nav-social-links a:nth-child(2),
 .nav-social-links a:nth-child(3) {
+  color: var(--blue-color2); 
+}
+
+.nav-social-links a:hover {
   color: var(--blue-color);
 }
 
 #about-us {
-  background: radial-gradient(circle at top left, #e0edff, #71ace6);
+  background: radial-gradient(circle at top left, #f1f5f9, #cbd5e1);
   margin: 5rem auto;
   display: flex;
   justify-content: center;
@@ -580,7 +523,7 @@ button:hover {
 .about-heading {
   font-size: 2rem;
   margin: 0 0 2rem;
-  background-image: linear-gradient(to right, #0f3651, #0b8fd6);
+  background-image: linear-gradient(to right, var(--blue-color2), var(--blue-color)); /* שילוב כחול כהה ובורדו */
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -606,8 +549,7 @@ button:hover {
 }
 
 .about-content button:hover {
-  background-color: var(--dark-color);
-  border: 1px solid var(--black-color-);
+  background-color: var(--blue-color2);
   color: var(--white-color);
   transform: scale(1.050);
 }
@@ -616,10 +558,6 @@ button:hover {
   font-size: .9rem;
   margin-right: .3rem;
 }
-
-
-
-
 
 .selected:hover {
   fill: var(--blue-color-dark);
@@ -670,7 +608,7 @@ button:hover {
   text-align: center;
   font-size: 2rem;
   margin: 0 0 2rem;
-  background-image: linear-gradient(to left, #19529c, #0bcfd6);
+  background-image: linear-gradient(to left, var(--blue-color2), var(--blue-color)); /* שילוב צבעים תואם */
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -678,13 +616,8 @@ button:hover {
 }
 
 @keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
 
 #contact-us {
@@ -695,7 +628,7 @@ button:hover {
   margin: 0 auto;
   gap: 3rem;
   width: 100%;
-  background: #0f2851;
+  background: var(--blue-color2);
   color: #f9fafb;
 }
 
@@ -726,37 +659,31 @@ button:hover {
   padding: 0.9rem 1.8rem;
   border-radius: 999px;
   border: none;
-  background-color: #0b7ed6;
+  background-color: var(--blue-color);
   color: #ffffff;
   width: auto;
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .contact-button:hover {
-  background-color: #38bdf8;
+  background-color: var(--blue-color-dark);
   transform: translateY(-1px);
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 25px rgba(128, 0, 32, 0.4);
 }
-
-
 
 .contact-content h2 {
   font-size: 2rem;
   margin: 0 0 2rem;
-  background-image: linear-gradient(to right, #191b9c, #0BD692);
+  background-image: linear-gradient(to right, #ffffff, #d1d5db); /* טקסט לבן מעל רקע כחול כהה */
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 }
 
-
-
 /* FOOTER */
-
 footer {
   color: white;
   background: var(--black-color-light);
-  /* padding-top: 1rem; */
   font-size: 1rem;
 }
 
@@ -787,12 +714,10 @@ footer {
   text-align: center;
 }
 
-
 .bottom-bar {
-  background: #0f2851;
+  background: var(--blue-color2);
   text-align: center;
   padding: 10px 0;
-  /* margin-top: 50px; */
   font-weight: bold;
 }
 
@@ -817,7 +742,7 @@ footer {
 .section-heading {
   font-size: 2rem;
   margin-bottom: 0.75rem;
-  background-image: linear-gradient(to right, #0f2851, #0b7ed6);
+  background-image: linear-gradient(to right, var(--blue-color2), var(--blue-color));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -885,9 +810,7 @@ footer {
   color: #4b5563;
 }
 
-
-h1,
-h3 {
+h1, h3 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -915,9 +838,8 @@ h3 {
 }
 
 #equipe {
-  background-color: rgb(0, 123, 255, 0.6);
+  background-color: rgba(15, 40, 81, 0.8); /* כחול כהה שקוף במקום הבהיר המקורי */
   padding: 10px;
-
 }
 
 /* Checkbox consent – ligne compacte et propre */
@@ -943,10 +865,8 @@ h3 {
   height: auto;
 }
 
-
 .form-group.consent-group input[type="checkbox"] {
   width: auto !important;
-  /* לבטל 100% רוחב */
   margin: 3px 0 0 0 !important;
 }
 
